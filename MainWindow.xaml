@@ -7,21 +7,14 @@
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="5*" />
         </Grid.ColumnDefinitions>
-
-        <!-- Левый список курсов -->
         <ListBox x:Name="CoursesListBox" Grid.Column="0" SelectionChanged="CoursesListBox_SelectionChanged" Margin="10,10,10,10">
-            <!-- Пример курсов -->
             <ListBoxItem Content="1 курс" />
             <ListBoxItem Content="2 курс" />
             <ListBoxItem Content="3 курс" />
         </ListBox>
-
-        <!-- Правый список студентов и их оценок -->
         <StackPanel Grid.Column="1" Margin="10,10,10,10">
             <ListBox x:Name="StudentsListBox" SelectionChanged="StudentsListBox_SelectionChanged" 
                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="100"/>
-
-            <!-- Информация по оценкам -->
             <DataGrid x:Name="GradesDataGrid" AutoGenerateColumns="False" Height="207">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Предмет" Binding="{Binding Subject}" Width="*"/>
